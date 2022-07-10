@@ -1,5 +1,4 @@
 import 'package:decimal/decimal.dart';
-import 'package:rational/rational.dart';
 
 /**
  * @Author: Sky24n
@@ -13,18 +12,14 @@ class NumUtil {
   /// The parameter [fractionDigits] must be an integer satisfying: `0 <= fractionDigits <= 20`.
   static num? getNumByValueStr(String valueStr, {int? fractionDigits}) {
     double? value = double.tryParse(valueStr);
-    return fractionDigits == null
-        ? value
-        : getNumByValueDouble(value, fractionDigits);
+    return fractionDigits == null ? value : getNumByValueDouble(value, fractionDigits);
   }
 
   /// The parameter [fractionDigits] must be an integer satisfying: `0 <= fractionDigits <= 20`.
   static num? getNumByValueDouble(double? value, int fractionDigits) {
     if (value == null) return null;
     String valueStr = value.toStringAsFixed(fractionDigits);
-    return fractionDigits == 0
-        ? int.tryParse(valueStr)
-        : double.tryParse(valueStr);
+    return fractionDigits == 0 ? int.tryParse(valueStr) : double.tryParse(valueStr);
   }
 
   /// get int by value str.
@@ -132,8 +127,7 @@ class NumUtil {
 
   /// 除
   static Decimal divideDecStr(String a, String b) {
-    Rational value = Decimal.parse(a) / Decimal.parse(b);
-    return value.toDecimal();
+    return Decimal.parse(a) / Decimal.parse(b);
   }
 
   /// 余数

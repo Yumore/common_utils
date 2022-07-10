@@ -7,11 +7,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  # https://github.com/a14n/dart-decimal
-  rational: ">=2.0.0 <5.0.0"
-  # https://github.com/a14n/dart-decimal
-  decimal: ">=2.0.0 <5.0.0"
-  # https://github.com/dart-lang/crypto
-  crypto: ">=3.0.0 <5.0.0"
-  # https://github.com/dart-lang/convert
-  convert: ">=3.0.0 <5.0.0"
+  rational: ^1.2.1
+  decimal: ^1.5.0
+  crypto: ^3.0.1
+  convert: ^3.0.2
